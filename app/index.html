@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div ng-repeat="header in headers" ng-include="header.templateURL"></div>
-            <div class="ui grid toolbar" id="toolbar">
+            <!-- <div class="ui grid toolbar" id="toolbar">
                 <div class="ui nine wide column" style="padding-top:0!important;">
                     <div class="ui icon menu" style="height: 38px;  display: flex; align-items: center;">
                         <span class="tool" ng-repeat="menu in menus" ng-include="'templates/toolbar.html'"></span>
@@ -70,9 +70,10 @@
                         <span ng-repeat="menu in sidebarMenus" ng-if="menu.state == 'SHOW'" ng-include="'templates/toolbar.html'" class="at-config-menu tool"></span>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div ng-include="'templates/deleteStageDialog.html'"></div>
-            <div id="mainContainerGrid" class="ui grid bottom attached celled">
+            <!-- <iframe id="editor" width="100%" height="600px" src="http://localhost:5000"></iframe> -->
+            <div id="mainContainerGrid" class="ui grid bottom attached celled" style="display: none;">
                 <div class="row">
                     <div class="ui column scrollable-slides">
                         <div ng-repeat="stage in stages track by $index" ng-class="stage.isSelected ? 'thumbnail-container selected-slide' : 'thumbnail-container'">
